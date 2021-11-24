@@ -10,3 +10,8 @@ def welcome_page(request):
 class TaskList(ListView):
     model = Task
     template_name = "todo/todo_detail.html"
+
+
+class TaskContent(DetailView):
+    model = Task
+    template_name = "todo/task_content.html"

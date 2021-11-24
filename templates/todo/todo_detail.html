@@ -18,18 +18,18 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
             <div class="collapse navbar-collapse"
                  id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="navbar-brand" href={% url "welcome_page" %}>Home</a>
                     <a class="navbar-brand" href={% url 'admin:index' %}>admin</a>
+                    <a class="navbar-brand" href={% url "welcome_page" %}>Home</a>
                 </div>
             </div>
         </nav>
 
         <div class="container mt-5">
-            <table class="table table-striped mt-4">
+            <table class="table table-striped mt-4 table-dark">
                 <thead>
                     <tr>
                         <th scope="col">
@@ -62,7 +62,7 @@
                             <th >{{re.category.name}}</th>
                             <th >{{re.priority}}</th>
                             <th>
-                                <a href="{% url 'task_list'%}" class="btn btn-info">View</a>
+                                <a href="{% url 'task_content' re.pk %}" class="btn btn-warning">View</a>
                             </th>
                         </tr>
                     {% endfor %}

@@ -12,8 +12,8 @@
 
         <style>
             body {
-                background-color: blue;
-                color: white;
+                background-color: #FFFFE0;
+                color: orange;
             }
 
             h1 {
@@ -24,12 +24,12 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
             <div class="collapse navbar-collapse"
                  id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="navbar-brand" href={% url "task_list" %}>Tasks List</a>
                     <a class="navbar-brand" href={% url 'admin:index' %}>admin</a>
+                    <a class="navbar-brand" href={% url "task_list" %}>Tasks List</a>
                 </div>
             </div>
         </nav>
